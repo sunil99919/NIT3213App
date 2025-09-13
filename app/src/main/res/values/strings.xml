@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NIT3213 App</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="error_network">Network error occurred</string>
+    <string name="error_login">Login failed</string>
+    <string name="error_loading">Failed to load data</string>
+</resources>
