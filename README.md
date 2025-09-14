@@ -167,41 +167,6 @@ NIT3213App/
 
 ---
 
-## 🚀 Setup Instructions
-
-### 1. Clone Repository
-
-```bash
-git clone https://github.com/Sunil/NIT3213App.git
-cd NIT3213App
-```
-
-### 2. Open in Android Studio
-
-- Use Android Studio Arctic Fox (2020.3.1) or newer
-- Gradle will sync dependencies automatically
-
-### 3. Requirements
-
-- Min SDK: 24
-- Target SDK: 34
-- JDK: 11
-
-Set environment variable if needed:
-
-```bash
-export JAVA_HOME=/path/to/jdk11
-```
-
-### 4. Run App
-
-- Launch an emulator (API 24+) or connect a device
-- Login credentials:
-   - Username → your first name
-   - Password → your student ID without 's'
-
----
-
 ## 🧪 Testing
 
 Unit tests are provided for major ViewModels:
