@@ -4,8 +4,10 @@ package com.example.nit3213app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -15,11 +17,20 @@ import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class ActivityDetailsBinding extends ViewDataBinding {
+  @NonNull
+  public final Button backButton;
+
+  @NonNull
+  public final CardView detailsCard;
+
   @Bindable
   protected Entity mEntity;
 
-  protected ActivityDetailsBinding(Object _bindingComponent, View _root, int _localFieldCount) {
+  protected ActivityDetailsBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      Button backButton, CardView detailsCard) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.backButton = backButton;
+    this.detailsCard = detailsCard;
   }
 
   public abstract void setEntity(@Nullable Entity entity);

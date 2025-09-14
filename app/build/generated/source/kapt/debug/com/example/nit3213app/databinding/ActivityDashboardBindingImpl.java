@@ -14,9 +14,15 @@ public class ActivityDashboardBindingImpl extends ActivityDashboardBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.entitiesRecyclerView, 1);
-        sViewsWithIds.put(R.id.progressBar, 2);
+        sViewsWithIds.put(R.id.loadingLayout, 1);
+        sViewsWithIds.put(R.id.errorLayout, 2);
         sViewsWithIds.put(R.id.errorTextView, 3);
+        sViewsWithIds.put(R.id.retryButton, 4);
+        sViewsWithIds.put(R.id.contentLayout, 5);
+        sViewsWithIds.put(R.id.sectionHeaderTextView, 6);
+        sViewsWithIds.put(R.id.welcomeCard, 7);
+        sViewsWithIds.put(R.id.entityCountTextView, 8);
+        sViewsWithIds.put(R.id.entitiesRecyclerView, 9);
     }
     // views
     @NonNull
@@ -27,13 +33,19 @@ public class ActivityDashboardBindingImpl extends ActivityDashboardBinding  {
     // Inverse Binding Event Handlers
 
     public ActivityDashboardBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
     }
     private ActivityDashboardBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (androidx.recyclerview.widget.RecyclerView) bindings[1]
+            , (android.widget.LinearLayout) bindings[5]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[9]
+            , (android.widget.TextView) bindings[8]
+            , (android.widget.LinearLayout) bindings[2]
             , (android.widget.TextView) bindings[3]
-            , (android.widget.ProgressBar) bindings[2]
+            , (android.widget.LinearLayout) bindings[1]
+            , (com.google.android.material.button.MaterialButton) bindings[4]
+            , (android.widget.TextView) bindings[6]
+            , (androidx.cardview.widget.CardView) bindings[7]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);

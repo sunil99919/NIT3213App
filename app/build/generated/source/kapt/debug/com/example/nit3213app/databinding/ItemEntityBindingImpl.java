@@ -18,12 +18,6 @@ public class ItemEntityBindingImpl extends ItemEntityBinding  {
     // views
     @NonNull
     private final androidx.cardview.widget.CardView mboundView0;
-    @NonNull
-    private final android.widget.TextView mboundView1;
-    @NonNull
-    private final android.widget.TextView mboundView2;
-    @NonNull
-    private final android.widget.TextView mboundView3;
     // variables
     // values
     // listeners
@@ -34,15 +28,15 @@ public class ItemEntityBindingImpl extends ItemEntityBinding  {
     }
     private ItemEntityBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
+            , (android.widget.TextView) bindings[2]
+            , (android.widget.TextView) bindings[3]
+            , (android.widget.TextView) bindings[1]
             );
+        this.entityArchitect.setTag(null);
+        this.entityLocation.setTag(null);
+        this.entityName.setTag(null);
         this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView1 = (android.widget.TextView) bindings[1];
-        this.mboundView1.setTag(null);
-        this.mboundView2 = (android.widget.TextView) bindings[2];
-        this.mboundView2.setTag(null);
-        this.mboundView3 = (android.widget.TextView) bindings[3];
-        this.mboundView3.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -101,12 +95,12 @@ public class ItemEntityBindingImpl extends ItemEntityBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        java.lang.String entityArchitect = null;
+        java.lang.String EntityArchitect1 = null;
         java.lang.String javaLangStringLocationEntityLocation = null;
-        java.lang.String entityName = null;
+        java.lang.String EntityName1 = null;
         com.example.nit3213app.data.api.models.Entity entity = mEntity;
         java.lang.String javaLangStringArchitectEntityArchitect = null;
-        java.lang.String entityLocation = null;
+        java.lang.String EntityLocation1 = null;
 
         if ((dirtyFlags & 0x3L) != 0) {
 
@@ -114,26 +108,26 @@ public class ItemEntityBindingImpl extends ItemEntityBinding  {
 
                 if (entity != null) {
                     // read entity.architect
-                    entityArchitect = entity.getArchitect();
+                    EntityArchitect1 = entity.getArchitect();
                     // read entity.name
-                    entityName = entity.getName();
+                    EntityName1 = entity.getName();
                     // read entity.location
-                    entityLocation = entity.getLocation();
+                    EntityLocation1 = entity.getLocation();
                 }
 
 
                 // read ("Architect: ") + (entity.architect)
-                javaLangStringArchitectEntityArchitect = ("Architect: ") + (entityArchitect);
+                javaLangStringArchitectEntityArchitect = ("Architect: ") + (EntityArchitect1);
                 // read ("Location: ") + (entity.location)
-                javaLangStringLocationEntityLocation = ("Location: ") + (entityLocation);
+                javaLangStringLocationEntityLocation = ("Location: ") + (EntityLocation1);
         }
         // batch finished
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView1, entityName);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, javaLangStringArchitectEntityArchitect);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView3, javaLangStringLocationEntityLocation);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.entityArchitect, javaLangStringArchitectEntityArchitect);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.entityLocation, javaLangStringLocationEntityLocation);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.entityName, EntityName1);
         }
     }
     // Listener Stub Implementations

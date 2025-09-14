@@ -4,6 +4,7 @@ package com.example.nit3213app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
@@ -15,11 +16,24 @@ import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class ItemEntityBinding extends ViewDataBinding {
+  @NonNull
+  public final TextView entityArchitect;
+
+  @NonNull
+  public final TextView entityLocation;
+
+  @NonNull
+  public final TextView entityName;
+
   @Bindable
   protected Entity mEntity;
 
-  protected ItemEntityBinding(Object _bindingComponent, View _root, int _localFieldCount) {
+  protected ItemEntityBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      TextView entityArchitect, TextView entityLocation, TextView entityName) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.entityArchitect = entityArchitect;
+    this.entityLocation = entityLocation;
+    this.entityName = entityName;
   }
 
   public abstract void setEntity(@Nullable Entity entity);

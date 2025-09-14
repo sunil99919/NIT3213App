@@ -13,11 +13,13 @@ public class ActivityDetailsBindingImpl extends ActivityDetailsBinding  {
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = null;
+        sViewsWithIds = new android.util.SparseIntArray();
+        sViewsWithIds.put(R.id.detailsCard, 8);
+        sViewsWithIds.put(R.id.backButton, 9);
     }
     // views
     @NonNull
-    private final androidx.core.widget.NestedScrollView mboundView0;
+    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     @NonNull
     private final android.widget.TextView mboundView1;
     @NonNull
@@ -38,12 +40,14 @@ public class ActivityDetailsBindingImpl extends ActivityDetailsBinding  {
     // Inverse Binding Event Handlers
 
     public ActivityDetailsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 8, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
     }
     private ActivityDetailsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
+            , (android.widget.Button) bindings[9]
+            , (androidx.cardview.widget.CardView) bindings[8]
             );
-        this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
+        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.mboundView1 = (android.widget.TextView) bindings[1];
         this.mboundView1.setTag(null);
@@ -118,15 +122,17 @@ public class ActivityDetailsBindingImpl extends ActivityDetailsBinding  {
             mDirtyFlags = 0;
         }
         int entityYearCompleted = 0;
-        java.lang.String entityArchitect = null;
-        java.lang.String integerToStringEntityHeight = null;
-        java.lang.String entityDescription = null;
-        java.lang.String integerToStringEntityYearCompleted = null;
         int entityHeight = 0;
         java.lang.String entityName = null;
-        java.lang.String entityStyle = null;
         com.example.nit3213app.data.api.models.Entity entity = mEntity;
         java.lang.String entityLocation = null;
+        java.lang.String entityArchitect = null;
+        java.lang.String integerToStringEntityHeight = null;
+        java.lang.String javaLangStringStyleEntityStyle = null;
+        java.lang.String entityDescription = null;
+        java.lang.String integerToStringEntityYearCompleted = null;
+        java.lang.String entityStyle = null;
+        java.lang.String javaLangStringArchitectEntityArchitect = null;
 
         if ((dirtyFlags & 0x3L) != 0) {
 
@@ -135,18 +141,18 @@ public class ActivityDetailsBindingImpl extends ActivityDetailsBinding  {
                 if (entity != null) {
                     // read entity.yearCompleted
                     entityYearCompleted = entity.getYearCompleted();
-                    // read entity.architect
-                    entityArchitect = entity.getArchitect();
-                    // read entity.description
-                    entityDescription = entity.getDescription();
                     // read entity.height
                     entityHeight = entity.getHeight();
                     // read entity.name
                     entityName = entity.getName();
-                    // read entity.style
-                    entityStyle = entity.getStyle();
                     // read entity.location
                     entityLocation = entity.getLocation();
+                    // read entity.architect
+                    entityArchitect = entity.getArchitect();
+                    // read entity.description
+                    entityDescription = entity.getDescription();
+                    // read entity.style
+                    entityStyle = entity.getStyle();
                 }
 
 
@@ -154,16 +160,20 @@ public class ActivityDetailsBindingImpl extends ActivityDetailsBinding  {
                 integerToStringEntityYearCompleted = java.lang.Integer.toString(entityYearCompleted);
                 // read Integer.toString(entity.height)
                 integerToStringEntityHeight = java.lang.Integer.toString(entityHeight);
+                // read ("Architect: ") + (entity.architect)
+                javaLangStringArchitectEntityArchitect = ("Architect: ") + (entityArchitect);
+                // read ("Style: ") + (entity.style)
+                javaLangStringStyleEntityStyle = ("Style: ") + (entityStyle);
         }
         // batch finished
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView1, entityName);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, entityArchitect);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView3, entityLocation);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView4, integerToStringEntityYearCompleted);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView5, entityStyle);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, javaLangStringStyleEntityStyle);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView3, javaLangStringArchitectEntityArchitect);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView4, entityLocation);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView5, integerToStringEntityYearCompleted);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView6, integerToStringEntityHeight);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView7, entityDescription);
         }

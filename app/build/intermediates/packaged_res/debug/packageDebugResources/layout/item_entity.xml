@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 
                                                        
                                                    
@@ -12,8 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="6dp" android:tag="layout/item_entity_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="false" android:tag="layout/item_entity_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,31 +23,55 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Show Name -->
             <TextView
+                android:id="@+id/entityName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:tag="binding_1"      
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
+                android:lineSpacingExtra="4dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/purple_700"
                 tools:text="Eiffel Tower" />
 
-            <!-- Show Architect -->
-            <TextView
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:tag="binding_2"                           
-                android:layout_marginTop="4dp"
-                tools:text="Architect: Gustave Eiffel" />
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"/>
 
-            <!-- Show Location -->
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag="binding_3"                         
-                android:layout_marginTop="4dp"
-                tools:text="Location: Paris, France" />
+                android:orientation="vertical"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/entityArchitect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_2"                           
+                    android:textSize="16sp"
+                    android:textColor="@color/text_secondary"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    tools:text="Architect: Gustave Eiffel" />
+
+                <TextView
+                    android:id="@+id/entityLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:tag="binding_3"                         
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    tools:text="Location: Paris, France" />
+            </LinearLayout>
         </LinearLayout>
-
     </androidx.cardview.widget.CardView>
          

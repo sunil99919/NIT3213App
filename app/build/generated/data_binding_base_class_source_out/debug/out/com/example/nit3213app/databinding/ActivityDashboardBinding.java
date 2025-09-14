@@ -4,33 +4,61 @@ package com.example.nit3213app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.nit3213app.R;
+import com.google.android.material.button.MaterialButton;
 import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class ActivityDashboardBinding extends ViewDataBinding {
   @NonNull
+  public final LinearLayout contentLayout;
+
+  @NonNull
   public final RecyclerView entitiesRecyclerView;
+
+  @NonNull
+  public final TextView entityCountTextView;
+
+  @NonNull
+  public final LinearLayout errorLayout;
 
   @NonNull
   public final TextView errorTextView;
 
   @NonNull
-  public final ProgressBar progressBar;
+  public final LinearLayout loadingLayout;
+
+  @NonNull
+  public final MaterialButton retryButton;
+
+  @NonNull
+  public final TextView sectionHeaderTextView;
+
+  @NonNull
+  public final CardView welcomeCard;
 
   protected ActivityDashboardBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      RecyclerView entitiesRecyclerView, TextView errorTextView, ProgressBar progressBar) {
+      LinearLayout contentLayout, RecyclerView entitiesRecyclerView, TextView entityCountTextView,
+      LinearLayout errorLayout, TextView errorTextView, LinearLayout loadingLayout,
+      MaterialButton retryButton, TextView sectionHeaderTextView, CardView welcomeCard) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.contentLayout = contentLayout;
     this.entitiesRecyclerView = entitiesRecyclerView;
+    this.entityCountTextView = entityCountTextView;
+    this.errorLayout = errorLayout;
     this.errorTextView = errorTextView;
-    this.progressBar = progressBar;
+    this.loadingLayout = loadingLayout;
+    this.retryButton = retryButton;
+    this.sectionHeaderTextView = sectionHeaderTextView;
+    this.welcomeCard = welcomeCard;
   }
 
   @NonNull
