@@ -42,10 +42,26 @@ class DashboardViewModelTest {
         // Given
         val keypass = "test-keypass"
         val entities = listOf(
-            Entity("value1", "value2", "description1"),
-            Entity("value3", "value4", "description2")
+            Entity(
+                name = "Eiffel Tower",
+                architect = "Gustave Eiffel",
+                location = "Paris, France",
+                yearCompleted = 1889,
+                style = "Structural Expressionism",
+                height = 324,
+                description = "Iconic iron lattice tower"
+            ),
+            Entity(
+                name = "Taj Mahal",
+                architect = "Ustad Ahmad Lahauri",
+                location = "Agra, India",
+                yearCompleted = 1653,
+                style = "Mughal Architecture",
+                height = 73,
+                description = "Ivory-white marble mausoleum"
+            )
         )
-        val dashboardResponse = DashboardResponse(entities, 2)
+        val dashboardResponse = DashboardResponse(entities, entities.size)
         whenever(repository.getDashboard(keypass)).thenReturn(Result.success(dashboardResponse))
 
         // When

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.nit3213app.LoginViewModelTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-09-14T14:04:31" hostname="DESKTOP-B4P7RFE" time="0.032">
+  <properties/>
+  <testcase name="login with empty credentials should return error" classname="com.example.nit3213app.LoginViewModelTest" time="0.006"/>
+  <testcase name="login with valid credentials should return success" classname="com.example.nit3213app.LoginViewModelTest" time="0.019"/>
+  <testcase name="login with invalid credentials should return error" classname="com.example.nit3213app.LoginViewModelTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

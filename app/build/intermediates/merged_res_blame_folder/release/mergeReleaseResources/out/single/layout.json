@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "com.example.nit3213app-mergeReleaseResources-50:/layout/activity_login.xml",
+        "source": "com.example.nit3213app-main-52:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.nit3213app-mergeReleaseResources-50:/layout/layout_error.xml",
+        "source": "com.example.nit3213app-main-52:/layout/layout_error.xml"
+    },
+    {
+        "merged": "com.example.nit3213app-mergeReleaseResources-50:/layout/activity_dashboard.xml",
+        "source": "com.example.nit3213app-main-52:/layout/activity_dashboard.xml"
+    },
+    {
+        "merged": "com.example.nit3213app-mergeReleaseResources-50:/layout/item_entity.xml",
+        "source": "com.example.nit3213app-main-52:/layout/item_entity.xml"
+    },
+    {
+        "merged": "com.example.nit3213app-mergeReleaseResources-50:/layout/activity_details.xml",
+        "source": "com.example.nit3213app-main-52:/layout/activity_details.xml"
+    }
+]

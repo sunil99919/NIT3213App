@@ -4,6 +4,7 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.nit3213app.data.api.models.LoginResponse
 import com.example.nit3213app.data.repository.AppRepository
 import com.example.nit3213app.ui.login.LoginViewModel
+import com.example.nit3213app.ui.login.LoginViewModel.LoginState
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
@@ -13,6 +14,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mock
 import org.mockito.junit.MockitoJUnitRunner
+import org.mockito.kotlin.any
 import org.mockito.kotlin.whenever
 
 @ExperimentalCoroutinesApi

@@ -1,0 +1,36 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_200
+color purple_500
+color purple_700
+color red
+color teal_200
+color teal_700
+color white
+id entitiesRecyclerView
+id errorDescriptionTextView
+id errorMessageTextView
+id errorTextView
+id loginButton
+id passwordEditText
+id progressBar
+id retryButton
+id titleTextView
+id usernameEditText
+layout activity_dashboard
+layout activity_details
+layout activity_login
+layout item_entity
+layout layout_error
+string app_name
+string error_icon
+string error_loading
+string error_login
+string error_network
+string login
+string password
+string retry
+string username
+style Base.Theme.NIT3213App
+style Theme.NIT3213App
