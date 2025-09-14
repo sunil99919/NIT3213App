@@ -4,15 +4,17 @@ package com.example.nit3213app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.example.nit3213app.R;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -21,30 +23,57 @@ public abstract class ActivityLoginBinding extends ViewDataBinding {
   public final TextView errorTextView;
 
   @NonNull
-  public final Button loginButton;
+  public final TextView footerTextView;
 
   @NonNull
-  public final EditText passwordEditText;
+  public final MaterialButton loginButton;
+
+  @NonNull
+  public final CardView loginCard;
+
+  @NonNull
+  public final CardView logoCard;
+
+  @NonNull
+  public final TextInputEditText passwordEditText;
+
+  @NonNull
+  public final TextInputLayout passwordLayout;
 
   @NonNull
   public final ProgressBar progressBar;
 
   @NonNull
-  public final TextView titleTextView;
+  public final TextView subtitleTextView;
 
   @NonNull
-  public final EditText usernameEditText;
+  public final TextInputEditText usernameEditText;
+
+  @NonNull
+  public final TextInputLayout usernameLayout;
+
+  @NonNull
+  public final TextView welcomeTextView;
 
   protected ActivityLoginBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextView errorTextView, Button loginButton, EditText passwordEditText,
-      ProgressBar progressBar, TextView titleTextView, EditText usernameEditText) {
+      TextView errorTextView, TextView footerTextView, MaterialButton loginButton,
+      CardView loginCard, CardView logoCard, TextInputEditText passwordEditText,
+      TextInputLayout passwordLayout, ProgressBar progressBar, TextView subtitleTextView,
+      TextInputEditText usernameEditText, TextInputLayout usernameLayout,
+      TextView welcomeTextView) {
     super(_bindingComponent, _root, _localFieldCount);
     this.errorTextView = errorTextView;
+    this.footerTextView = footerTextView;
     this.loginButton = loginButton;
+    this.loginCard = loginCard;
+    this.logoCard = logoCard;
     this.passwordEditText = passwordEditText;
+    this.passwordLayout = passwordLayout;
     this.progressBar = progressBar;
-    this.titleTextView = titleTextView;
+    this.subtitleTextView = subtitleTextView;
     this.usernameEditText = usernameEditText;
+    this.usernameLayout = usernameLayout;
+    this.welcomeTextView = welcomeTextView;
   }
 
   @NonNull

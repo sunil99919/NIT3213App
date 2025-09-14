@@ -16,11 +16,11 @@
         "source": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-main-53:\\layout\\activity_details.xml"
     },
     {
-        "merged": "com.example.nit3213app-mergeDebugResources-50:/layout/activity_details.xml",
-        "source": "com.example.nit3213app-main-53:/layout/activity_details.xml"
-    },
-    {
         "merged": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-mergeDebugResources-50:\\layout\\activity_login.xml",
         "source": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-main-53:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "com.example.nit3213app-mergeDebugResources-50:/layout/activity_login.xml",
+        "source": "com.example.nit3213app-main-53:/layout/activity_login.xml"
     }
 ]

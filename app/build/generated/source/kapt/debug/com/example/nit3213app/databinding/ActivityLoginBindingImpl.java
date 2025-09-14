@@ -14,12 +14,18 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.titleTextView, 1);
-        sViewsWithIds.put(R.id.usernameEditText, 2);
-        sViewsWithIds.put(R.id.passwordEditText, 3);
-        sViewsWithIds.put(R.id.loginButton, 4);
-        sViewsWithIds.put(R.id.progressBar, 5);
-        sViewsWithIds.put(R.id.errorTextView, 6);
+        sViewsWithIds.put(R.id.logoCard, 1);
+        sViewsWithIds.put(R.id.welcomeTextView, 2);
+        sViewsWithIds.put(R.id.subtitleTextView, 3);
+        sViewsWithIds.put(R.id.loginCard, 4);
+        sViewsWithIds.put(R.id.usernameLayout, 5);
+        sViewsWithIds.put(R.id.usernameEditText, 6);
+        sViewsWithIds.put(R.id.passwordLayout, 7);
+        sViewsWithIds.put(R.id.passwordEditText, 8);
+        sViewsWithIds.put(R.id.loginButton, 9);
+        sViewsWithIds.put(R.id.progressBar, 10);
+        sViewsWithIds.put(R.id.errorTextView, 11);
+        sViewsWithIds.put(R.id.footerTextView, 12);
     }
     // views
     @NonNull
@@ -30,16 +36,22 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding  {
     // Inverse Binding Event Handlers
 
     public ActivityLoginBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 13, sIncludes, sViewsWithIds));
     }
     private ActivityLoginBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.TextView) bindings[6]
-            , (android.widget.Button) bindings[4]
-            , (android.widget.EditText) bindings[3]
-            , (android.widget.ProgressBar) bindings[5]
-            , (android.widget.TextView) bindings[1]
-            , (android.widget.EditText) bindings[2]
+            , (android.widget.TextView) bindings[11]
+            , (android.widget.TextView) bindings[12]
+            , (com.google.android.material.button.MaterialButton) bindings[9]
+            , (androidx.cardview.widget.CardView) bindings[4]
+            , (androidx.cardview.widget.CardView) bindings[1]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[8]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[7]
+            , (android.widget.ProgressBar) bindings[10]
+            , (android.widget.TextView) bindings[3]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[6]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[5]
+            , (android.widget.TextView) bindings[2]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);

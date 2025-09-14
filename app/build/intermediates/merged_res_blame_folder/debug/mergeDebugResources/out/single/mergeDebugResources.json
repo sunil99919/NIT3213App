@@ -1,7 +1,7 @@
 [
     {
-        "merged": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-debug-51:\\layout_activity_login.xml.flat",
-        "source": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-main-53:\\layout\\activity_login.xml"
+        "merged": "com.example.nit3213app-debug-51:/layout_activity_login.xml.flat",
+        "source": "com.example.nit3213app-main-53:/layout/activity_login.xml"
     },
     {
         "merged": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-debug-51:\\layout_activity_dashboard.xml.flat",
@@ -12,12 +12,40 @@
         "source": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-main-53:\\layout\\activity_details.xml"
     },
     {
-        "merged": "com.example.nit3213app-debug-51:/layout_activity_details.xml.flat",
-        "source": "com.example.nit3213app-main-53:/layout/activity_details.xml"
+        "merged": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-debug-51:\\drawable_ic_login_24.xml.flat",
+        "source": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-main-53:\\drawable\\ic_login_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-debug-51:\\drawable_ic_person_24.xml.flat",
+        "source": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-main-53:\\drawable\\ic_person_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-debug-51:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-main-53:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-debug-51:\\drawable_error_background.xml.flat",
+        "source": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-main-53:\\drawable\\error_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-debug-51:\\drawable_ic_school_24.xml.flat",
+        "source": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-main-53:\\drawable\\ic_school_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-debug-51:\\drawable_login_background_gradient.xml.flat",
+        "source": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-main-53:\\drawable\\login_background_gradient.xml"
     },
     {
         "merged": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-debug-51:\\layout_layout_error.xml.flat",
         "source": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-main-53:\\layout\\layout_error.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-debug-51:\\drawable_button_selector.xml.flat",
+        "source": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-main-53:\\drawable\\button_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-debug-51:\\drawable_ic_lock_24.xml.flat",
+        "source": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-main-53:\\drawable\\ic_lock_24.xml"
     },
     {
         "merged": "C:\\Users\\Mossaffa\\.gradle\\daemon\\8.9\\com.example.nit3213app-debug-51:\\layout_item_entity.xml.flat",

@@ -1398,6 +1398,8 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color background_primary
+color background_secondary
 color black
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
@@ -1455,6 +1457,7 @@ color dim_foreground_disabled_material_dark
 color dim_foreground_disabled_material_light
 color dim_foreground_material_dark
 color dim_foreground_material_light
+color error_color
 color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
@@ -2087,6 +2090,7 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color primary_color
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -2095,16 +2099,21 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color primary_variant
 color purple_200
 color purple_500
 color purple_700
 color red
 color ripple_material_dark
 color ripple_material_light
+color secondary_color
 color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color secondary_variant
+color success_color
+color surface_color
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
@@ -2113,9 +2122,15 @@ color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
 color teal_200
 color teal_700
+color text_hint
+color text_primary
+color text_secondary
 color tooltip_background_dark
 color tooltip_background_light
+color warning_color
 color white
+color white_60
+color white_80
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -3001,11 +3016,13 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable button_selector
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable error_background
 drawable ic_arrow_back_black_24
 drawable ic_call_answer
 drawable ic_call_answer_low
@@ -3016,6 +3033,8 @@ drawable ic_call_decline_low
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
+drawable ic_lock_24
+drawable ic_login_24
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
 drawable ic_m3_chip_close
@@ -3023,7 +3042,10 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_person_24
+drawable ic_school_24
 drawable ic_search_black_24
+drawable login_background_gradient
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3301,6 +3323,7 @@ id fitXY
 id fixed
 id flip
 id floating
+id footerTextView
 id forever
 id fragment_container_view_tag
 id frost
@@ -3348,6 +3371,8 @@ id listMode
 id list_item
 id locale
 id loginButton
+id loginCard
+id logoCard
 id ltr
 id m3_side_sheet
 id marquee
@@ -3458,6 +3483,7 @@ id parentPanel
 id parentRelative
 id parent_matrix
 id passwordEditText
+id passwordLayout
 id password_toggle
 id path
 id pathRelative
@@ -3545,6 +3571,7 @@ id stop
 id stretch
 id submenuarrow
 id submit_area
+id subtitleTextView
 id supportScrollUp
 id tabMode
 id tag_accessibility_actions
@@ -3580,7 +3607,6 @@ id textinput_suffix_text
 id time
 id title
 id titleDividerNoCustom
-id titleTextView
 id title_template
 id toggle
 id top
@@ -3600,6 +3626,7 @@ id unlabeled
 id up
 id useLogo
 id usernameEditText
+id usernameLayout
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3609,6 +3636,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id welcomeTextView
 id west
 id withText
 id with_icon
@@ -4116,7 +4144,6 @@ style Base_Theme_MaterialComponents_Light_Dialog_Bridge
 style Base_Theme_MaterialComponents_Light_Dialog_FixedSize
 style Base_Theme_MaterialComponents_Light_Dialog_MinWidth
 style Base_Theme_MaterialComponents_Light_DialogWhenLarge
-style Base_Theme_NIT3213App
 style Base_ThemeOverlay_AppCompat
 style Base_ThemeOverlay_AppCompat_ActionBar
 style Base_ThemeOverlay_AppCompat_Dark
@@ -4400,6 +4427,10 @@ style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day
 style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Window_Fullscreen
 style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year
 style ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox
+style TextAppearance_App_Body1
+style TextAppearance_App_Body2
+style TextAppearance_App_Headline1
+style TextAppearance_App_Headline2
 style TextAppearance_AppCompat
 style TextAppearance_AppCompat_Body1
 style TextAppearance_AppCompat_Body2
@@ -4737,6 +4768,8 @@ style ThemeOverlay_MaterialComponents_TimePicker_Display_TextInputEditText
 style ThemeOverlay_MaterialComponents_Toolbar_Popup_Primary
 style ThemeOverlay_MaterialComponents_Toolbar_Primary
 style ThemeOverlay_MaterialComponents_Toolbar_Surface
+style Widget_App_Button
+style Widget_App_TextInputLayout
 style Widget_AppCompat_ActionBar
 style Widget_AppCompat_ActionBar_Solid
 style Widget_AppCompat_ActionBar_TabBar
