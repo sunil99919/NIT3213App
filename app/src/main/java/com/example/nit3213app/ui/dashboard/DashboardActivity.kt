@@ -5,12 +5,14 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.nit3213app.databinding.ActivityDashboardBinding
 import com.example.nit3213app.ui.dashboard.adapter.EntityAdapter
 import com.example.nit3213app.ui.details.DetailsActivity
 import com.example.nit3213app.utils.showToast
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class DashboardActivity : AppCompatActivity() {
@@ -50,28 +52,31 @@ class DashboardActivity : AppCompatActivity() {
     }
 
     private fun setupObservers() {
-        viewModel.dashboardState.observe(this) { state ->
-            when (state) {
-                is DashboardState.Idle -> {
-                    binding.progressBar.isVisible = false
-                }
-                is DashboardState.Loading -> {
-                    binding.progressBar.isVisible = true
-                    binding.errorTextView.isVisible = false
-                    binding.entitiesRecyclerView.isVisible = false
-                }
-                is DashboardState.Success -> {
-                    binding.progressBar.isVisible = false
-                    binding.errorTextView.isVisible = false
-                    binding.entitiesRecyclerView.isVisible = true
-                    adapter.submitList(state.entities)
-                }
-                is DashboardState.Error -> {
-                    binding.progressBar.isVisible = false
-                    binding.errorTextView.isVisible = true
-                    binding.entitiesRecyclerView.isVisible = false
-                    binding.errorTextView.text = state.message
-                    showToast(state.message)
+        // Collect StateFlow using lifecycleScope
+        lifecycleScope.launch {
+            viewModel.dashboardState.collect { state ->
+                when (state) {
+                    is DashboardState.Idle -> {
+                        binding.progressBar.isVisible = false
+                    }
+                    is DashboardState.Loading -> {
+                        binding.progressBar.isVisible = true
+                        binding.errorTextView.isVisible = false
+                        binding.entitiesRecyclerView.isVisible = false
+                    }
+                    is DashboardState.Success -> {
+                        binding.progressBar.isVisible = false
+                        binding.errorTextView.isVisible = false
+                        binding.entitiesRecyclerView.isVisible = true
+                        adapter.submitList(state.entities)
+                    }
+                    is DashboardState.Error -> {
+                        binding.progressBar.isVisible = false
+                        binding.errorTextView.isVisible = true
+                        binding.entitiesRecyclerView.isVisible = false
+                        binding.errorTextView.text = state.message
+                        showToast(state.message)
+                    }
                 }
             }
         }

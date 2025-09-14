@@ -3,8 +3,8 @@ package com.example.nit3213app.ui.details
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.example.nit3213app.databinding.ActivityDetailsBinding
 import com.example.nit3213app.data.api.models.Entity
+import com.example.nit3213app.databinding.ActivityDetailsBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -24,11 +24,14 @@ class DetailsActivity : AppCompatActivity() {
             return
         }
 
-        viewModel.setEntity(entity)
+        // Assign directly to the ViewModel property
+        viewModel.entity = entity
+
         setupUI()
     }
 
     private fun setupUI() {
+        // Use data binding or assign fields manually
         binding.entity = viewModel.entity
 
         supportActionBar?.apply {

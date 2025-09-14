@@ -9,8 +9,4 @@ import javax.inject.Inject
 class DetailsViewModel @Inject constructor() : ViewModel() {
 
     lateinit var entity: Entity
-
-    fun setEntity(entity: Entity) {
-        this.entity = entity
-    }
 }

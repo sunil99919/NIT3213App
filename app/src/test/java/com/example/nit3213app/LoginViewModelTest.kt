@@ -3,7 +3,6 @@ package com.example.nit3213app
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.nit3213app.data.api.models.LoginResponse
 import com.example.nit3213app.data.repository.AppRepository
-import com.example.nit3213app.ui.login.LoginState
 import com.example.nit3213app.ui.login.LoginViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest

@@ -6,10 +6,12 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
+import androidx.lifecycle.lifecycleScope
 import com.example.nit3213app.databinding.ActivityLoginBinding
 import com.example.nit3213app.ui.dashboard.DashboardActivity
 import com.example.nit3213app.utils.showToast
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.collect
 
 @AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
@@ -33,7 +35,6 @@ class LoginActivity : AppCompatActivity() {
             viewModel.login(username, password)
         }
 
-        // Enable button only when both fields have text
         binding.usernameEditText.addTextChangedListener { validateForm() }
         binding.passwordEditText.addTextChangedListener { validateForm() }
     }
@@ -45,28 +46,32 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun setupObservers() {
-        viewModel.loginState.observe(this) { state ->
-            when (state) {
-                is LoginState.Idle -> {
-                    binding.progressBar.isVisible = false
-                    binding.loginButton.isEnabled = true
-                }
-                is LoginState.Loading -> {
-                    binding.progressBar.isVisible = true
-                    binding.loginButton.isEnabled = false
-                    binding.errorTextView.isVisible = false
-                }
-                is LoginState.Success -> {
-                    binding.progressBar.isVisible = false
-                    binding.loginButton.isEnabled = true
-                    navigateToDashboard(state.keypass)
-                }
-                is LoginState.Error -> {
-                    binding.progressBar.isVisible = false
-                    binding.loginButton.isEnabled = true
-                    binding.errorTextView.isVisible = true
-                    binding.errorTextView.text = state.message
-                    showToast(state.message)
+        // Collect StateFlow in a lifecycle-aware coroutine
+        lifecycleScope.launchWhenStarted {
+            viewModel.loginState.collect { state ->
+                when (state) {
+                    is LoginViewModel.LoginState.Idle -> {
+                        binding.progressBar.isVisible = false
+                        binding.loginButton.isEnabled = true
+                        binding.errorTextView.isVisible = false
+                    }
+                    is LoginViewModel.LoginState.Loading -> {
+                        binding.progressBar.isVisible = true
+                        binding.loginButton.isEnabled = false
+                        binding.errorTextView.isVisible = false
+                    }
+                    is LoginViewModel.LoginState.Success -> {
+                        binding.progressBar.isVisible = false
+                        binding.loginButton.isEnabled = true
+                        navigateToDashboard(state.keypass)
+                    }
+                    is LoginViewModel.LoginState.Error -> {
+                        binding.progressBar.isVisible = false
+                        binding.loginButton.isEnabled = true
+                        binding.errorTextView.isVisible = true
+                        binding.errorTextView.text = state.message
+                        showToast(state.message)
+                    }
                 }
             }
         }

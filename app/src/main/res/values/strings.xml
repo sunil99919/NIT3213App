@@ -6,4 +6,6 @@
     <string name="error_network">Network error occurred</string>
     <string name="error_login">Login failed</string>
     <string name="error_loading">Failed to load data</string>
+    <string name="error_icon">Error icon</string>
+    <string name="retry">Retry</string>
 </resources>

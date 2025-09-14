@@ -42,11 +42,12 @@ class LoginViewModel @Inject constructor(
     fun resetState() {
         _loginState.value = LoginState.Idle
     }
-}
 
-sealed class LoginState {
-    object Idle : LoginState()
-    object Loading : LoginState()
-    data class Success(val keypass: String) : LoginState()
-    data class Error(val message: String) : LoginState()
+    // Sealed class representing login states
+    sealed class LoginState {
+        object Idle : LoginState()
+        object Loading : LoginState()
+        data class Success(val keypass: String) : LoginState()
+        data class Error(val message: String) : LoginState()
+    }
 }
