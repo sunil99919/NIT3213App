@@ -172,7 +172,7 @@ NIT3213App/
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/<your-username>/NIT3213App.git
+git clone https://github.com/Sunil/NIT3213App.git
 cd NIT3213App
 ```
 
@@ -233,12 +233,6 @@ Instrumented tests for UI flows:
 ## 📝 Git & Commit Practices
 
 - Incremental commits with clear messages (not one giant commit)
-- Example commit history:
-   - `Implement LoginViewModel with API integration`
-   - `Add RecyclerView adapter for dashboard entities`
-   - `Fix Entity model mapping to API schema`
-   - `Add unit tests for Login and Dashboard ViewModels`
-
 ---
 
 ## 👨‍💻 Author
