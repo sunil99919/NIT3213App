@@ -7,6 +7,5 @@ import javax.inject.Inject
 
 @HiltViewModel
 class DetailsViewModel @Inject constructor() : ViewModel() {
-
     lateinit var entity: Entity
 }

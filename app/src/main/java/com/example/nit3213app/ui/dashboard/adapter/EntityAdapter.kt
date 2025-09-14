@@ -27,7 +27,6 @@ class EntityAdapter(
         private val binding: ItemEntityBinding,
         private val onItemClick: (Entity) -> Unit
     ) : RecyclerView.ViewHolder(binding.root) {
-
         fun bind(entity: Entity) {
             binding.entity = entity
             binding.root.setOnClickListener { onItemClick(entity) }
@@ -37,11 +36,12 @@ class EntityAdapter(
 
     class EntityDiffCallback : DiffUtil.ItemCallback<Entity>() {
         override fun areItemsTheSame(oldItem: Entity, newItem: Entity): Boolean {
-            return oldItem.property1 == newItem.property1 &&
-                    oldItem.property2 == newItem.property2
+            // Assuming `name` uniquely identifies an entity
+            return oldItem.name == newItem.name
         }
 
         override fun areContentsTheSame(oldItem: Entity, newItem: Entity): Boolean {
+            // Leverage data class equals() to compare fields
             return oldItem == newItem
         }
     }

@@ -6,12 +6,11 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Entity(
-    @SerializedName("property1")
-    val property1: String,
-
-    @SerializedName("property2")
-    val property2: String,
-
-    @SerializedName("description")
-    val description: String
+    @SerializedName("name") val name: String,
+    @SerializedName("architect") val architect: String,
+    @SerializedName("location") val location: String,
+    @SerializedName("yearCompleted") val yearCompleted: Int,
+    @SerializedName("style") val style: String,
+    @SerializedName("height") val height: Int,
+    @SerializedName("description") val description: String
 ) : Parcelable

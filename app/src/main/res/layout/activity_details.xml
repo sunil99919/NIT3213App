@@ -23,82 +23,136 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="4dp">
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="24dp">
+                    android:padding="20dp">
 
+                    <!-- Name -->
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Property 1"
+                        android:text="Name"
                         android:textSize="14sp"
-                        android:textColor="?attr/colorPrimary"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorPrimary" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:layout_marginBottom="16dp"
-                        android:text="@{entity.property1}"
-                        android:textSize="16sp"
-                        tools:text="Property 1 Value" />
+                        android:text="@{entity.name}"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:text="Eiffel Tower"
+                        android:layout_marginBottom="12dp"/>
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="?android:attr/listDivider"
-                        android:layout_marginVertical="8dp" />
-
+                    <!-- Architect -->
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Property 2"
+                        android:text="Architect"
                         android:textSize="14sp"
-                        android:textColor="?attr/colorPrimary"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorPrimary"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:layout_marginBottom="16dp"
-                        android:text="@{entity.property2}"
+                        android:text="@{entity.architect}"
                         android:textSize="16sp"
-                        tools:text="Property 2 Value" />
+                        tools:text="Gustave Eiffel"
+                        android:layout_marginBottom="12dp"/>
 
-                    <View
+                    <!-- Location -->
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="?android:attr/listDivider"
-                        android:layout_marginVertical="8dp" />
+                        android:layout_height="wrap_content"
+                        android:text="Location"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorPrimary"/>
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{entity.location}"
+                        android:textSize="16sp"
+                        tools:text="Paris, France"
+                        android:layout_marginBottom="12dp"/>
+
+                    <!-- Year Completed -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Year Completed"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorPrimary"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{Integer.toString(entity.yearCompleted)}'
+                        android:textSize="16sp"
+                        tools:text="1889"
+                        android:layout_marginBottom="12dp"/>
+
+                    <!-- Style -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Style"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorPrimary"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{entity.style}"
+                        android:textSize="16sp"
+                        tools:text="Structural Expressionism"
+                        android:layout_marginBottom="12dp"/>
+
+                    <!-- Height -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Height (m)"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorPrimary"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{Integer.toString(entity.height)}'
+                        android:textSize="16sp"
+                        tools:text="324"
+                        android:layout_marginBottom="12dp"/>
+
+                    <!-- Description -->
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Description"
                         android:textSize="14sp"
-                        android:textColor="?attr/colorPrimary"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorPrimary"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
                         android:text="@{entity.description}"
                         android:textSize="16sp"
-                        tools:text="Detailed description of the entity goes here. This should provide comprehensive information about what this entity represents and its characteristics." />
+                        tools:text="An iron lattice tower in Paris..." />
 
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
-
         </LinearLayout>
-
     </androidx.core.widget.NestedScrollView>
 </layout>

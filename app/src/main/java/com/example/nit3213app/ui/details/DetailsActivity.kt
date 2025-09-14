@@ -1,7 +1,6 @@
 package com.example.nit3213app.ui.details
 
 import android.os.Bundle
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.nit3213app.data.api.models.Entity
 import com.example.nit3213app.databinding.ActivityDetailsBinding
@@ -11,7 +10,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class DetailsActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailsBinding
-    private val viewModel: DetailsViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,24 +22,17 @@ class DetailsActivity : AppCompatActivity() {
             return
         }
 
-        // Assign directly to the ViewModel property
-        viewModel.entity = entity
-
-        setupUI()
-    }
-
-    private fun setupUI() {
-        // Use data binding or assign fields manually
-        binding.entity = viewModel.entity
+        // bind the entity directly to XML
+        binding.entity = entity
 
         supportActionBar?.apply {
-            title = "Entity Details"
+            title = entity.name
             setDisplayHomeAsUpEnabled(true)
         }
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
+        onBackPressedDispatcher.onBackPressed()
         return true
     }
 }
