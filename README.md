@@ -5,7 +5,7 @@ This project demonstrates **API integration**, **UI design**, and **Android deve
 
 ---
 
-## ✨ Features
+## Features
 
 - **Login Screen**
    - Authenticate with `username = first name` and `password = student ID (without 's')`
@@ -36,12 +36,12 @@ This project demonstrates **API integration**, **UI design**, and **Android deve
 
 ---
 
-## 🌐 API Integration
+## API Integration
 
 **Base URL:**  
 `https://nit3213api.onrender.com/`
 
-### 🔑 Login Endpoint
+### Login Endpoint
 
 - **POST** `/br/auth` (or `/footscray/auth`, `/sydney/auth` depending on campus)
 - **Request body:**
@@ -61,7 +61,7 @@ This project demonstrates **API integration**, **UI design**, and **Android deve
 }
 ```
 
-### 📋 Dashboard Endpoint
+### Dashboard Endpoint
 
 - **GET** `/dashboard/{keypass}`
 - **Success response example:**
@@ -85,7 +85,7 @@ This project demonstrates **API integration**, **UI design**, and **Android deve
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Language**: Kotlin
 - **Architecture**: MVVM (Model-View-ViewModel)
@@ -98,7 +98,7 @@ This project demonstrates **API integration**, **UI design**, and **Android deve
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 NIT3213App/
@@ -167,7 +167,7 @@ NIT3213App/
 
 ---
 
-## 🧪 Testing
+## Testing
 
 Unit tests are provided for major ViewModels:
 
@@ -191,16 +191,16 @@ Instrumented tests for UI flows:
 ./gradlew connectedAndroidTest
 ```
 
-**Expected:** ✅ All tests pass with coverage for Success and Error states
+**Expected:** All tests pass with coverage for Success and Error states
 
 ---
 
-## 📝 Git & Commit Practices
+## Git & Commit Practices
 
-- Incremental commits with clear messages (not one giant commit)
+- Incremental commits with clear messages
 ---
 
-## 👨‍💻 Author
+## Author
 
 - **Name**: Sunil Sevda
 - **Student ID**: S8110082
