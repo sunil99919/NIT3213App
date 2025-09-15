@@ -208,7 +208,7 @@ Instrumented tests for UI flows:
 
 ---
 
-## 📄 License
+## License
 
 This project was created as part of the NIT3213 coursework.  
 It is for educational purposes only and not intended for production use.
