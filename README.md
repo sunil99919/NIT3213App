@@ -1,4 +1,4 @@
-# 📱 NIT3213 Android Application
+# NIT3213 Android Application
 
 An Android application developed for the **NIT3213 Final Assignment**.  
 This project demonstrates **API integration**, **UI design**, and **Android development best practices** using a modern **MVVM architecture**.
