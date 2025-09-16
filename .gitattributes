@@ -1,11 +1,13 @@
 # GitHub Linguist configuration
-*.java linguist-generated=true
-*.class linguist-generated=true
+
 /app/build/** linguist-generated=true
 /build/** linguist-generated=true
 /.idea/** linguist-generated=true
-**/build/generated/** linguist-generated=true
+
+/**/build/generated/** linguist-generated=true
 **/databinding/** linguist-generated=true
 **/viewbinding/** linguist-generated=true
 **/hilt_aggregated_deps/** linguist-generated=true
 **/dagger/** linguist-generated=true
+
+*.class linguist-generated=true
