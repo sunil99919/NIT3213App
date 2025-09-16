@@ -11,3 +11,5 @@
 **/dagger/** linguist-generated=true
 
 *.class linguist-generated=true
+*.xml linguist-detectable=true
+
